@@ -34,3 +34,7 @@
 	path = src/yast-rake
 	url = https://github.com/yast/yast-rake.git
 	branch = master
+[submodule "src/yast-perl-bindings"]
+	path = src/yast-perl-bindings
+	url = https://github.com/yast/yast-perl-bindings.git
+	branch = master

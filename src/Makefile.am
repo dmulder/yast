@@ -2,7 +2,11 @@ SUBDIRS = yast-core libyui libyui-ncurses
 
 all: yast-ycp-ui-bindings yast-python-bindings yast-ruby-bindings
 
-.PHONY: yast-ycp-ui-bindings yast-python-bindings yast-ruby-bindings
+.PHONY: yast-ycp-ui-bindings yast-python-bindings yast-ruby-bindings yast-perl-bindings
+
+yast-perl-bindings:
+	ln -fs $(srcdir)/yast-ycp-ui-bindings/src ycp-ui
+	pushd $@; $(MAKE); popd
 
 yast-ycp-ui-bindings:
 	ln -fs $(srcdir)/libyui/src yui
